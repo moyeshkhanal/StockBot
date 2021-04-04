@@ -8,6 +8,9 @@ class Help(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
+    @commands.command(aliases=["on"])
+    async def online(self, ctx, *ticker):
+        await ctx.send("Bot is live on the server")
     # Send the user error if no ticker is found
     @commands.Cog.listener()
     async def on_command_error(self, ctx, error):
