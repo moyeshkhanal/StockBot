@@ -38,10 +38,6 @@ class StockCommands(commands.Cog):
                 askPrice = data["askPrice"]
                 askSize = data["askSize"]
 
-                # stock = fin(tickers)
-                # stock.TickerCharts(timeframe="daily", charttype="advanced", out_dir="charts")
-                # embed.set_thumbnail(url=("./charts/"+tickers+".jpg"))
-
                 embed.add_field(name="Total Volume", value=totalVol, inline=True)
                 embed.add_field(name="52 Week High", value=fiftyTwoWkHigh, inline=False)
 
@@ -66,10 +62,6 @@ class StockCommands(commands.Cog):
     async def on_command_error(self, ctx, error):
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send("Please make sure you have all the required arguments. Ex: $quote tickerSymbol")
-
-
-
-
 
 def setup(bot):
     bot.add_cog(StockCommands(bot))

@@ -1,1 +1,4 @@
-$cw,
+$cw <ticker> : Get the weekly chart for a given ticker symbol
+$cd <ticker> : Get the daily chart for a given ticker symbol
+$ch <ticker> : Get the hourly chart for a given ticker symbol
+$q <ticker> : Get the quote for a given ticker

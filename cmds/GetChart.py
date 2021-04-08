@@ -37,9 +37,5 @@ class GetChart(commands.Cog):
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send("Please make sure you have all the required arguments. Ex: $quote tickerSymbol")
 
-
-
-
-
 def setup(bot):
     bot.add_cog(GetChart(bot))
