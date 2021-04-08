@@ -12,10 +12,10 @@ class Alerts(commands.Cog):
         print(support[0])
         for i in range(1, len(support), 1):
             title, price = support[i].split(":")
-            # print(title, price)
-            embed.add_field(name=title, value=price)
 
-        await ctx.send(embed=embed)
+            embed.add_field(name=title, value=price)
+        channel = self.bot.get_channel(826997532504490014)
+        await channel.send(embed=embed)
 
     # Send the user error if no ticker is found
     @commands.Cog.listener()
