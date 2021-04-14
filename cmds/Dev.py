@@ -5,7 +5,6 @@ class Dev(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.has_role("Admin")
     @commands.command(aliases=["o", "op", "entry"])
     async def option(self, ctx, *alert):
         if ctx.author.id == 710319553573289987 or ctx.author.id == 682487741958979594:
@@ -18,7 +17,6 @@ class Dev(commands.Cog):
         else:
             await ctx.send("You do not have permission to use this command")
 
-    @commands.has_role("Admin")
     @commands.command(aliases=["s", "sw"])
     async def swing(self, ctx, *alert):
         if ctx.author.id == 710319553573289987 or ctx.author.id == 682487741958979594:
@@ -31,7 +29,6 @@ class Dev(commands.Cog):
         else:
             await ctx.send("You do not have permission to use this command")
 
-    @commands.has_role("Admin")
     @commands.command(aliases=["d", "dt"])
     async def day(self, ctx, *alert):
         if ctx.author.id == 710319553573289987 or ctx.author.id == 682487741958979594:
