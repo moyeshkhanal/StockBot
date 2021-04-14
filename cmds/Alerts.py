@@ -12,7 +12,6 @@ class Alerts(commands.Cog):
         print(support[0])
         for i in range(1, len(support), 1):
             title, price = support[i].split(":")
-
             embed.add_field(name=title, value=price)
         channel = self.bot.get_channel(826997532504490014)
         await channel.send(embed=embed)
